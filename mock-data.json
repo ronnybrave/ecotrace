@@ -1,0 +1,92 @@
+{
+  "stats": {
+    "totalTrees": 847293,
+    "ngosRegistered": 312,
+    "citiesCovered": 89,
+    "greenAreaHectares": 4231
+  },
+  "groups": [
+    {
+      "id": 1,
+      "name": "Green Roots India",
+      "location": "Bengaluru, Karnataka",
+      "treesPlanted": 45200,
+      "areaCovered": "120 hectares",
+      "members": 148,
+      "status": "active",
+      "lat": 12.9716,
+      "lng": 77.5946,
+      "greenIncrease": 34
+    },
+    {
+      "id": 2,
+      "name": "EcoWarriors Pune",
+      "location": "Pune, Maharashtra",
+      "treesPlanted": 31800,
+      "areaCovered": "85 hectares",
+      "members": 92,
+      "status": "active",
+      "lat": 18.5204,
+      "lng": 73.8567,
+      "greenIncrease": 28
+    },
+    {
+      "id": 3,
+      "name": "Forest Brigade Delhi",
+      "location": "New Delhi",
+      "treesPlanted": 67500,
+      "areaCovered": "210 hectares",
+      "members": 230,
+      "status": "active",
+      "lat": 28.6139,
+      "lng": 77.2090,
+      "greenIncrease": 41
+    },
+    {
+      "id": 4,
+      "name": "Mumbai Greens",
+      "location": "Mumbai, Maharashtra",
+      "treesPlanted": 28900,
+      "areaCovered": "72 hectares",
+      "members": 115,
+      "status": "monitoring",
+      "lat": 19.0760,
+      "lng": 72.8777,
+      "greenIncrease": 22
+    },
+    {
+      "id": 5,
+      "name": "Hyderabad TreeForce",
+      "location": "Hyderabad, Telangana",
+      "treesPlanted": 52100,
+      "areaCovered": "145 hectares",
+      "members": 178,
+      "status": "active",
+      "lat": 17.3850,
+      "lng": 78.4867,
+      "greenIncrease": 37
+    },
+    {
+      "id": 6,
+      "name": "Chennai Canopy",
+      "location": "Chennai, Tamil Nadu",
+      "treesPlanted": 19400,
+      "areaCovered": "58 hectares",
+      "members": 67,
+      "status": "active",
+      "lat": 13.0827,
+      "lng": 80.2707,
+      "greenIncrease": 19
+    }
+  ],
+  "galleryImages": [
+    { "title": "Bengaluru Drive 2024", "category": "plantation" },
+    { "title": "Satellite View - Before", "category": "satellite" },
+    { "title": "Satellite View - After", "category": "satellite" },
+    { "title": "Volunteer Day Mumbai", "category": "event" },
+    { "title": "Forest Canopy Growth", "category": "growth" },
+    { "title": "Aerial Drone Survey", "category": "drone" },
+    { "title": "Community Plantation", "category": "plantation" },
+    { "title": "AI Analysis Dashboard", "category": "tech" }
+  ]
+}
