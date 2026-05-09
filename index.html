@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecotrace — Tracking Green Growth Through Technology</title>
+  <meta name="description" content="AI-powered tree monitoring platform for NGOs, schools, and environmental organizations. Track plantation drives, analyze satellite imagery, and measure your green impact.">
+  <meta name="keywords" content="tree plantation tracking, NGO green monitoring, satellite AI greenery, ecotrace">
+  <meta property="og:title" content="Ecotrace — Tracking Green Growth Through Technology">
+  <meta property="og:description" content="AI + Satellite monitoring for tree plantation drives. Register your NGO and track your environmental impact.">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">🌿</div>
+      Ecotrace
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#groups">NGOs</a></li>
+      <li><a href="#map">Map</a></li>
+      <li><a href="#satellite">AI Analysis</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <button class="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+      <a href="#contact" class="btn btn-ghost">Register NGO</a>
+      <a href="#dashboard" class="btn btn-primary">Dashboard</a>
+    </div>
+    <div class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close">✕</button>
+  <a href="#about">About</a>
+  <a href="#groups">NGOs</a>
+  <a href="#map">Map</a>
+  <a href="#satellite">AI Analysis</a>
+  <a href="#features">Features</a>
+  <a href="#contact">Register</a>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-grid"></div>
+  </div>
+
+  <div class="container">
+    <div class="grid-2" style="gap: 48px; align-items: center;">
+      <!-- Left: Text -->
+      <div class="hero-content">
+        <div class="hero-eyebrow">AI + Satellite Technology</div>
+        <h1 class="hero-title">
+          Track Every<br>
+          <span class="accent">Green</span> Step<br>
+          <span class="outline">Forward</span>
+        </h1>
+        <p class="hero-desc">
+          Empowering NGOs, schools, and environmental groups to monitor tree plantation drives using AI-powered satellite imagery analysis. See your green impact in real time.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary btn-lg">🌱 Register Your Group</a>
+          <a href="#groups" class="btn btn-ghost btn-lg">Explore Projects →</a>
+          <a href="#satellite" class="btn btn-ghost btn-lg">Track Impact</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num" data-target="847293" data-suffix="">0</span>
+            <span class="hero-stat-label">Trees Tracked</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num" data-target="312" data-suffix="">0</span>
+            <span class="hero-stat-label">NGOs Registered</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num" data-target="89" data-suffix="">0</span>
+            <span class="hero-stat-label">Cities Covered</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Satellite Card -->
+      <div class="hero-visual" data-aos="fade-left">
+        <div class="satellite-card">
+          <div class="sat-header">
+            <div class="sat-status"></div>
+            <span>ECOTRACE SATELLITE FEED</span>
+            <span style="margin-left:auto; opacity:0.4">LIVE • KA-12 BAND</span>
+          </div>
+          <div class="sat-img-compare" id="hero-compare">
+            <div class="sat-img-before">
+              <div style="text-align:center; color: rgba(200,169,126,0.4);">
+                <div style="font-size:3rem; filter:blur(1px);">🏜️🌾🪨</div>
+                <div style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; margin-top:8px;">Pre-Plantation</div>
+              </div>
+            </div>
+            <div class="sat-img-after">
+              <div class="canopy-dots" style="position:absolute;inset:0;"></div>
+              <div style="text-align:center; color: rgba(34,197,94,0.5); position:relative; z-index:1;">
+                <div style="font-size:3rem; filter:blur(1px);">🌳🌲🌿</div>
+                <div style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; margin-top:8px; color:#22c55e;">Post-Plantation</div>
+              </div>
+            </div>
+            <div class="sat-divider" id="hero-divider" style="left:50%"></div>
+            <div class="sat-label sat-label-before">BEFORE</div>
+            <div class="sat-label sat-label-after">AFTER</div>
+          </div>
+          <div class="sat-metrics">
+            <div class="sat-metric">
+              <div class="sat-metric-val">+34%</div>
+              <div class="sat-metric-key">Green Cover</div>
+            </div>
+            <div class="sat-metric">
+              <div class="sat-metric-val">76%</div>
+              <div class="sat-metric-key">Survival</div>
+            </div>
+            <div class="sat-metric">
+              <div class="sat-metric-val">18.7t</div>
+              <div class="sat-metric-key">CO₂ Saved</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════════ -->
+<section class="about section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <!-- Left: Text & features -->
+      <div>
+        <span class="section-tag">About Ecotrace</span>
+        <h2 class="section-title" data-aos="fade-up">
+          Why Plantation <span class="text-green">Tracking</span> Matters
+        </h2>
+        <p class="section-subtitle" data-aos="fade-up" data-delay="100">
+          Trees are Earth's lungs. But millions of planted saplings never survive to maturity — without monitoring, most plantation drives lack accountability. Ecotrace bridges this gap.
+        </p>
+
+        <div class="about-stats" data-aos="fade-up" data-delay="200">
+          <div class="about-stat-card">
+            <div class="about-stat-icon">🌡️</div>
+            <div class="about-stat-num">1.5°C</div>
+            <div class="about-stat-desc">Global warming limit — trees are critical to staying below it</div>
+          </div>
+          <div class="about-stat-card">
+            <div class="about-stat-icon">🌳</div>
+            <div class="about-stat-num">3.04T</div>
+            <div class="about-stat-desc">Trees on Earth. We need billions more to fight climate change</div>
+          </div>
+          <div class="about-stat-card">
+            <div class="about-stat-icon">💨</div>
+            <div class="about-stat-num">22kg</div>
+            <div class="about-stat-desc">CO₂ absorbed per tree annually — every sapling counts</div>
+          </div>
+          <div class="about-stat-card">
+            <div class="about-stat-icon">📉</div>
+            <div class="about-stat-num">40%</div>
+            <div class="about-stat-desc">Of planted trees fail without proper monitoring programs</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Earth visual + features -->
+      <div>
+        <div class="about-visual" data-aos="zoom-in">
+          <div class="about-earth">
+            <div class="about-orbit orbit-1">
+              <div class="orbit-dot" style="--r:1;"></div>
+            </div>
+            <div class="about-orbit orbit-2">
+              <div class="orbit-dot" style="--r:-1;"></div>
+            </div>
+            <div style="position:relative;z-index:2;text-align:center;padding:60px 20px;">
+              <div style="font-size:5rem; filter:drop-shadow(0 0 20px rgba(34,197,94,0.4))">🌍</div>
+              <div style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:var(--green-vivid); margin-top:12px;">AI Satellite Monitoring</div>
+              <div style="font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:6px;">Real-time greenery analysis</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-feature-list" style="margin-top: 32px;" data-aos="fade-up" data-delay="200">
+          <div class="about-feature">
+            <div class="about-feature-icon">🛰️</div>
+            <div>
+              <div class="about-feature-title">Satellite Before/After Analysis</div>
+              <div class="about-feature-desc">Compare vegetation indices over time using high-res satellite imagery to quantify real green growth.</div>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">🤖</div>
+            <div>
+              <div class="about-feature-title">AI Greenery Detection</div>
+              <div class="about-feature-desc">Machine learning models detect tree canopy, measure survival rates, and estimate carbon impact automatically.</div>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">🤝</div>
+            <div>
+              <div class="about-feature-title">NGO Collaboration Portal</div>
+              <div class="about-feature-desc">Connect volunteer groups, share plantation data, and collectively measure regional environmental progress.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     REGISTERED GROUPS / NGOS
+═══════════════════════════════════════════ -->
+<section class="groups section" id="groups">
+  <div class="container">
+    <div class="groups-header">
+      <div>
+        <span class="section-tag">Registered Organizations</span>
+        <h2 class="section-title" data-aos="fade-up">Active <span class="text-green">NGOs</span> & Groups</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-delay="100">Organizations making real environmental impact, tracked and verified by Ecotrace satellite systems.</p>
+      </div>
+      <a href="#contact" class="btn btn-primary" data-aos="fade-up" data-delay="200">+ Register Your NGO</a>
+    </div>
+
+    <div class="group-cards" id="group-cards">
+      <!-- Populated by JS -->
+      <div style="color:var(--text-muted);padding:40px;text-align:center;grid-column:1/-1;">
+        Loading groups...
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     MAP
+═══════════════════════════════════════════ -->
+<section class="map-section section" id="map">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <span class="section-tag">Plantation Locations</span>
+      <h2 class="section-title" data-aos="fade-up">Interactive <span class="text-green">Plantation Map</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-delay="100">
+        Click any pin to explore plantation details, satellite analysis status, and group information.
+      </p>
+    </div>
+    <div id="plantation-map" data-aos="zoom-in" data-delay="200"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     AI SATELLITE ANALYSIS
+═══════════════════════════════════════════ -->
+<section class="satellite section" id="satellite">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:64px;">
+      <span class="section-tag">AI-Powered Analysis</span>
+      <h2 class="section-title" data-aos="fade-up">Satellite <span class="text-green">Greenery</span> Intelligence</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-delay="100">
+        Our AI compares satellite imagery over time, detecting vegetation growth with precision unavailable to ground teams.
+      </p>
+    </div>
+
+    <div class="satellite-layout">
+      <!-- Left: Steps -->
+      <div data-aos="fade-right">
+        <div class="analysis-steps">
+          <div class="analysis-step">
+            <div class="step-num">01</div>
+            <div>
+              <div class="step-title">Project Registration</div>
+              <div class="step-desc">NGOs register plantation sites with GPS coordinates, planting dates, and species information.</div>
+            </div>
+          </div>
+          <div class="analysis-step">
+            <div class="step-num">02</div>
+            <div>
+              <div class="step-title">Baseline Satellite Capture</div>
+              <div class="step-desc">Pre-plantation imagery is captured and stored as the baseline for future comparisons.</div>
+            </div>
+          </div>
+          <div class="analysis-step">
+            <div class="step-num">03</div>
+            <div>
+              <div class="step-title">AI Vegetation Analysis</div>
+              <div class="step-desc">NDVI and machine learning models analyze spectral data to detect live vegetation and canopy growth.</div>
+            </div>
+          </div>
+          <div class="analysis-step">
+            <div class="step-num">04</div>
+            <div>
+              <div class="step-title">Periodic Monitoring</div>
+              <div class="step-desc">Automated scans every 3 months track survival rates, growth velocity, and seasonal health.</div>
+            </div>
+          </div>
+          <div class="analysis-step">
+            <div class="step-num">05</div>
+            <div>
+              <div class="step-title">Impact Report Generation</div>
+              <div class="step-desc">Comprehensive PDF reports with carbon absorption, survival rate, and area coverage metrics.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Comparison widget -->
+      <div data-aos="fade-left">
+        <div class="comparison-widget">
+          <div class="comparison-header">
+            <span style="color:var(--green-vivid); font-weight:700;">🔬 Bengaluru Region — Drive 2023</span>
+            <span style="color:var(--text-muted);">12.97°N 77.59°E</span>
+          </div>
+          <div class="comparison-slider-wrap" id="main-compare">
+            <div class="comp-before"></div>
+            <div class="comp-after">
+              <div class="canopy-dots"></div>
+            </div>
+            <div class="comp-line" id="comp-line" style="left:50%">
+              <div class="comp-handle">↔</div>
+            </div>
+            <div class="comp-badges">
+              <span class="comp-badge badge-before">Before · 2022</span>
+              <span class="comp-badge badge-after">After · 2024</span>
+            </div>
+          </div>
+          <div class="comparison-metrics">
+            <div class="comp-metric">
+              <div class="comp-metric-val" data-target="34" data-suffix="%">0%</div>
+              <div class="comp-metric-label">Green Increase</div>
+            </div>
+            <div class="comp-metric">
+              <div class="comp-metric-val" data-target="76" data-suffix="%">0%</div>
+              <div class="comp-metric-label">Survival Rate</div>
+            </div>
+            <div class="comp-metric">
+              <div class="comp-metric-val" data-target="18" data-suffix="t">0t</div>
+              <div class="comp-metric-label">CO₂ Absorbed</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="chart-row" style="margin-top:24px;">
+          <div class="chart-card">
+            <div class="chart-title">📈 Vegetation Growth (Monthly)</div>
+            <canvas id="growth-chart" height="120"></canvas>
+          </div>
+          <div class="chart-card">
+            <div class="chart-title">🌲 Tree Survival Status</div>
+            <canvas id="survival-chart" height="120"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FEATURES
+═══════════════════════════════════════════ -->
+<section class="features section" id="features">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:16px;">
+      <span class="section-tag">Platform Capabilities</span>
+      <h2 class="section-title" data-aos="fade-up">Everything You Need to <span class="text-green">Track Impact</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-delay="100">
+        A complete toolkit for environmental organizations to run, monitor, and report on plantation programs.
+      </p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card" data-aos="fade-up">
+        <div class="feature-icon">🛰️</div>
+        <div class="feature-title">Satellite Comparison Engine</div>
+        <div class="feature-desc">Automated before/after analysis using multi-spectral satellite imagery at 10m resolution.</div>
+        <div class="feature-tag">Core Feature</div>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-delay="100">
+        <div class="feature-icon">🧠</div>
+        <div class="feature-title">AI Greenery Detection</div>
+        <div class="feature-desc">NDVI-based ML models identify living canopy, estimate tree counts, and flag unhealthy zones.</div>
+        <div class="feature-tag">AI-Powered</div>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-delay="200">
+        <div class="feature-icon">📊</div>
+        <div class="feature-title">Real-time Analytics</div>
+        <div class="feature-desc">Live dashboards showing tree survival rates, green cover change, and CO₂ absorption metrics.</div>
+        <div class="feature-tag">Dashboard</div>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-delay="300">
+        <div class="feature-icon">🗺️</div>
+        <div class="feature-title">GIS Plantation Mapping</div>
+        <div class="feature-desc">Pin plantation drives on interactive maps with polygon boundary support for large areas.</div>
+        <div class="feature-tag">Geospatial</div>
+      </div>
+      <div class="feature-card" data-aos="fade-up">
+        <div class="feature-icon">👥</div>
+        <div class="feature-title">Multi-NGO Collaboration</div>
+        <div class="feature-desc">Shared project spaces for volunteer groups, schools, and corporate sustainability teams.</div>
+        <div class="feature-tag">Collaboration</div>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-delay="100">
+        <div class="feature-icon">📄</div>
+        <div class="feature-title">Automated Impact Reports</div>
+        <div class="feature-desc">One-click PDF generation with certified environmental metrics for donors and grant applications.</div>
+        <div class="feature-tag">Reporting</div>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-delay="200">
+        <div class="feature-icon">🌐</div>
+        <div class="feature-title">Open API Access</div>
+        <div class="feature-desc">Integrate Ecotrace data into your own platforms via REST API. Export KML, GeoJSON formats.</div>
+        <div class="feature-tag">Developer</div>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-delay="300">
+        <div class="feature-icon">🔔</div>
+        <div class="feature-title">Smart Alerts</div>
+        <div class="feature-desc">Automated notifications when survival dips below threshold or growth anomalies are detected.</div>
+        <div class="feature-tag">Monitoring</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     IMPACT STATS (animated counters)
+═══════════════════════════════════════════ -->
+<section class="impact section" id="impact">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:56px;">
+      <span class="section-tag">Collective Impact</span>
+      <h2 class="section-title" data-aos="fade-up">Numbers That <span class="text-green">Matter</span></h2>
+    </div>
+    <div class="impact-grid" data-aos="zoom-in">
+      <div class="impact-stat">
+        <span class="impact-icon">🌳</span>
+        <span class="impact-num" data-target="847293">0</span>
+        <span class="impact-label">Total Trees Planted</span>
+      </div>
+      <div class="impact-stat">
+        <span class="impact-icon">🏢</span>
+        <span class="impact-num" data-target="312">0</span>
+        <span class="impact-label">NGOs Registered</span>
+      </div>
+      <div class="impact-stat">
+        <span class="impact-icon">🏙️</span>
+        <span class="impact-num" data-target="89">0</span>
+        <span class="impact-label">Cities Covered</span>
+      </div>
+      <div class="impact-stat">
+        <span class="impact-icon">🌿</span>
+        <span class="impact-num" data-target="4231">0</span>
+        <span class="impact-label">Hectares Greened</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     DASHBOARD UI MOCKUP
+═══════════════════════════════════════════ -->
+<section class="dashboard-section section" id="dashboard">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <span class="section-tag">Group Dashboard</span>
+      <h2 class="section-title" data-aos="fade-up">Your <span class="text-green">Control Center</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-delay="100">
+        Each registered group gets a full-featured dashboard to manage plantations, upload imagery, and view AI reports.
+      </p>
+    </div>
+
+    <div class="dashboard-container" data-aos="zoom-in">
+      <!-- Topbar -->
+      <div class="db-topbar">
+        <div class="db-dot" style="background:#f87171;"></div>
+        <div class="db-dot" style="background:#fbbf24;"></div>
+        <div class="db-dot" style="background:#22c55e;"></div>
+        <span style="margin-left:16px; font-size:0.8rem; color:var(--text-muted);">Ecotrace Dashboard — Green Roots India</span>
+      </div>
+
+      <div class="db-layout">
+        <!-- Sidebar -->
+        <div class="db-sidebar">
+          <div class="db-user">
+            <div class="db-avatar">🌳</div>
+            <div>
+              <div class="db-user-name">Green Roots India</div>
+              <div class="db-user-role">Admin</div>
+            </div>
+          </div>
+          <div class="db-nav-item active">📊 Overview</div>
+          <div class="db-nav-item">🗺️ Plantation Sites</div>
+          <div class="db-nav-item">🛰️ Satellite Reports</div>
+          <div class="db-nav-item">👥 Members</div>
+          <div class="db-nav-item">📤 Upload Images</div>
+          <div class="db-nav-item">📄 Impact Reports</div>
+          <div class="db-nav-item">⚙️ Settings</div>
+        </div>
+
+        <!-- Main content -->
+        <div class="db-main">
+          <div class="db-title">📊 Overview · Q4 2024</div>
+
+          <!-- KPIs -->
+          <div class="db-kpis">
+            <div class="db-kpi">
+              <div class="db-kpi-val">45,200</div>
+              <div class="db-kpi-label">Trees Planted</div>
+            </div>
+            <div class="db-kpi">
+              <div class="db-kpi-val">76%</div>
+              <div class="db-kpi-label">Survival Rate</div>
+            </div>
+            <div class="db-kpi">
+              <div class="db-kpi-val">+34%</div>
+              <div class="db-kpi-label">Green Cover</div>
+            </div>
+            <div class="db-kpi">
+              <div class="db-kpi-val">18.7t</div>
+              <div class="db-kpi-label">CO₂ Absorbed</div>
+            </div>
+          </div>
+
+          <!-- Two columns -->
+          <div class="db-row">
+            <!-- Recent sites -->
+            <div class="db-card">
+              <div class="db-card-title">Recent Plantation Sites</div>
+              <table class="db-table">
+                <tr><td>Bannerghatta Road</td><td>3,200 trees</td><td style="color:#22c55e">✓ Active</td></tr>
+                <tr><td>Cubbon Park Extension</td><td>1,800 trees</td><td style="color:#22c55e">✓ Active</td></tr>
+                <tr><td>Hesaraghatta Lake</td><td>4,500 trees</td><td style="color:#fbbf24">⏳ Monitor</td></tr>
+                <tr><td>Turahalli Forest</td><td>2,100 trees</td><td style="color:#22c55e">✓ Active</td></tr>
+                <tr><td>Whitefield Zone</td><td>890 trees</td><td style="color:#22c55e">✓ Active</td></tr>
+              </table>
+            </div>
+
+            <!-- Upload + mini chart -->
+            <div class="db-card">
+              <div class="db-card-title">Monthly Trees Planted</div>
+              <div class="bar-chart-mini" id="mini-bar-chart"></div>
+              <div style="margin-top:24px;">
+                <div class="db-card-title">Upload Satellite Image</div>
+                <div class="upload-area">
+                  <span class="upload-icon">🛰️</span>
+                  <div style="font-weight:600;font-size:0.85rem;color:var(--white);">Drop image here or click to browse</div>
+                  <div style="font-size:0.75rem;margin-top:4px;">GeoTIFF, PNG, JPG — Max 50MB</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     IMPACT CALCULATOR
+═══════════════════════════════════════════ -->
+<section class="calculator" id="calculator">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:40px;">
+      <span class="section-tag">Impact Tool</span>
+      <h2 class="section-title" data-aos="fade-up">Calculate Your <span class="text-green">Green Impact</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-delay="100">Estimate the environmental benefit of your plantation drive.</p>
+    </div>
+    <div class="calc-card" data-aos="zoom-in" data-delay="200">
+      <div class="calc-grid">
+        <div class="form-group">
+          <label class="form-label">Number of Trees: <strong id="calc-tree-val" style="color:var(--green-vivid)">100</strong></label>
+          <input type="range" id="calc-trees" class="range-input" min="10" max="100000" value="100" step="10">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Area (hectares): <strong id="calc-area-val" style="color:var(--green-vivid)">5</strong></label>
+          <input type="range" id="calc-area" class="range-input" min="1" max="500" value="5" step="1">
+        </div>
+      </div>
+      <div class="calc-result">
+        <div>
+          <div class="calc-result-val" id="calc-co2">2.2t</div>
+          <div class="calc-result-label">CO₂ Absorbed/Year</div>
+        </div>
+        <div>
+          <div class="calc-result-val" id="calc-o2">10t</div>
+          <div class="calc-result-label">O₂ Produced/Year</div>
+        </div>
+        <div>
+          <div class="calc-result-val" id="calc-temp">0.01°C</div>
+          <div class="calc-result-label">Cooling Effect</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     GALLERY
+═══════════════════════════════════════════ -->
+<section class="gallery section" id="gallery">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:8px;">
+      <span class="section-tag">Photo Gallery</span>
+      <h2 class="section-title" data-aos="fade-up">From Ground to <span class="text-green">Satellite</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-delay="100">Plantation drives, volunteer activities, and satellite visuals from across India.</p>
+    </div>
+    <div class="gallery-grid" data-aos="fade-up" data-delay="200">
+      <div class="gallery-item">
+        <div class="gallery-bg g1" style="width:100%;height:100%;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:5rem;opacity:0.2;filter:blur(2px);">🌳🌲🌳</div>
+        </div>
+        <div class="gallery-overlay">
+          <div>
+            <div class="gallery-label">Bengaluru Drive 2024</div>
+            <div class="gallery-cat">Plantation</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-bg g2" style="width:100%;height:100%;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;opacity:0.2;">🏜️🌾</div>
+        </div>
+        <div class="gallery-overlay">
+          <div>
+            <div class="gallery-label">Satellite Before — 2022</div>
+            <div class="gallery-cat">Satellite</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-bg g3" style="width:100%;height:100%;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;opacity:0.2;">🌿🌳</div>
+        </div>
+        <div class="gallery-overlay">
+          <div>
+            <div class="gallery-label">Satellite After — 2024</div>
+            <div class="gallery-cat">Satellite</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-bg g4" style="width:100%;height:100%;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;opacity:0.2;">🚁📷</div>
+        </div>
+        <div class="gallery-overlay">
+          <div>
+            <div class="gallery-label">Aerial Drone Survey</div>
+            <div class="gallery-cat">Drone</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-bg g5" style="width:100%;height:100%;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;opacity:0.2;">🙌🌱</div>
+        </div>
+        <div class="gallery-overlay">
+          <div>
+            <div class="gallery-label">Mumbai Volunteer Day</div>
+            <div class="gallery-cat">Event</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-bg g6" style="width:100%;height:100%;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;opacity:0.2;">📊🤖</div>
+        </div>
+        <div class="gallery-overlay">
+          <div>
+            <div class="gallery-label">AI Analysis Interface</div>
+            <div class="gallery-cat">Tech</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-bg g7" style="width:100%;height:100%;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;opacity:0.2;">🏕️🌄</div>
+        </div>
+        <div class="gallery-overlay">
+          <div>
+            <div class="gallery-label">Community Plantation Drive</div>
+            <div class="gallery-cat">Plantation</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-bg g8" style="width:100%;height:100%;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;opacity:0.2;">🌲🌿🌳</div>
+        </div>
+        <div class="gallery-overlay">
+          <div>
+            <div class="gallery-label">Forest Canopy Growth</div>
+            <div class="gallery-cat">Growth</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CONTACT & REGISTRATION
+═══════════════════════════════════════════ -->
+<section class="contact section" id="contact">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:56px;">
+      <span class="section-tag">Get Started</span>
+      <h2 class="section-title" data-aos="fade-up">Join the <span class="text-green">Green Movement</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-delay="100">Register your NGO or community group and start tracking your environmental impact today.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Contact info -->
+      <div class="contact-info" data-aos="fade-right">
+        <div class="contact-item">
+          <div class="contact-item-icon">🌍</div>
+          <div>
+            <div class="contact-item-title">Our Mission</div>
+            <div class="contact-item-text">Track 10 million trees by 2027 across 500+ NGOs in India. Join us in making every plantation accountable.</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📧</div>
+          <div>
+            <div class="contact-item-title">Email Us</div>
+            <div class="contact-item-text">hello@ecotrace.green<br>partnerships@ecotrace.green</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div>
+            <div class="contact-item-title">Headquarters</div>
+            <div class="contact-item-text">Bengaluru, Karnataka, India<br>Operating across India & South Asia</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🚀</div>
+          <div>
+            <div class="contact-item-title">Free for NGOs</div>
+            <div class="contact-item-text">Ecotrace is free for registered non-profits. Corporate and government plans available.</div>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div style="background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:var(--radius);padding:24px;">
+          <div style="font-weight:700;margin-bottom:12px;">📬 Newsletter</div>
+          <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:16px;">Get monthly environmental impact reports and platform updates.</div>
+          <div style="display:flex;gap:10px;">
+            <input type="email" class="form-input" placeholder="your@email.com" style="flex:1;" />
+            <button class="btn btn-primary">Subscribe</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Registration form -->
+      <div data-aos="fade-left">
+        <form class="contact-form" id="register-form">
+          <div class="form-title">🌱 Register Your Group</div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Organization Name *</label>
+              <input type="text" class="form-input" placeholder="Green Roots Foundation" required />
+              <div class="form-error">Organization name is required</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Type</label>
+              <select class="form-select" required>
+                <option value="">Select type</option>
+                <option>NGO / Non-Profit</option>
+                <option>School / College</option>
+                <option>Corporate CSR</option>
+                <option>Government Body</option>
+                <option>Community Group</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Contact Person *</label>
+              <input type="text" class="form-input" placeholder="Full Name" required />
+              <div class="form-error">Name is required</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-input" placeholder="+91 98765 43210" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Email Address *</label>
+            <input type="email" class="form-input" placeholder="contact@yourorg.com" required />
+            <div class="form-error">Valid email required</div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Plantation Location *</label>
+              <input type="text" class="form-input" placeholder="City, State" required />
+              <div class="form-error">Location is required</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Team Members</label>
+              <input type="number" class="form-input" placeholder="50" min="1" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Plantation Area / Description</label>
+            <textarea class="form-textarea" placeholder="Describe your plantation site, area size, and goals..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg form-submit">🌳 Register Your Group</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div>
+        <div class="nav-logo" style="font-size:1.3rem;font-family:'Syne',sans-serif;font-weight:800;display:flex;align-items:center;gap:10px;">
+          <div class="nav-logo-icon">🌿</div>
+          Ecotrace
+        </div>
+        <p class="footer-brand-desc">
+          AI-powered tree plantation monitoring platform for NGOs, schools, and environmental organizations. Tracking green growth through technology.
+        </p>
+        <div class="footer-social">
+          <a class="social-link" href="#" title="Twitter">𝕏</a>
+          <a class="social-link" href="#" title="LinkedIn">in</a>
+          <a class="social-link" href="#" title="Instagram">📷</a>
+          <a class="social-link" href="#" title="GitHub">⌨</a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#features">Features</a>
+          <a href="#satellite">AI Analysis</a>
+          <a href="#dashboard">Dashboard</a>
+          <a href="#map">Plantation Map</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Community</div>
+        <div class="footer-links">
+          <a href="#groups">NGO Registry</a>
+          <a href="#contact">Register Group</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#impact">Impact Stats</a>
+          <a href="#calculator">Impact Calculator</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <div class="footer-links">
+          <a href="#">API Docs</a>
+          <a href="#">Research Papers</a>
+          <a href="#">Blog</a>
+          <a href="#">Press Kit</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2024 Ecotrace. Built for environmental impact. 🌍</div>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Open Source</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
